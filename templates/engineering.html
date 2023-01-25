@@ -53,7 +53,18 @@
                                                         </h2>
                                                         <div id="collapse{{uni}}{{fac}}{{round}}{{prog}}" class="accordion-collapse collapse" aria-labelledby="heading{{uni}}{{fac}}{{round}}{{prog}}" data-bs-parent="#accordionExample{{uni}}{{fac}}{{round}}">
                                                             <div class="accordion-body" id="body{{uni}}{{fac}}{{round}}{{prog}}">
-                                                                {{prog}}
+                                                                <div class="container text-center">
+                                                                {% for coll, vall in progList.items() %}
+                                                                    <div class="row">
+                                                                        <div class="col">
+                                                                            {{coll}}
+                                                                        </div>
+                                                                        <div class="col">
+                                                                            {{vall}}
+                                                                        </div>
+                                                                    </div>
+                                                                {% endfor %}
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
