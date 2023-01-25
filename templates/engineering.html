@@ -13,32 +13,65 @@
 
 <hr class="my-2">
 
-<div class="accordion" id="accordionPanelsStayOpenExample">
-    {% for u in uni_list %}
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="{{u}}">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{u}}" aria-expanded="false" aria-controls="{{u}}">
-                    {{u}}
-                </button>
-            </h2>
-            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="{{u}}">
-                <div class="accordion-body">
-                    {% for u in uni_list %}
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="{{u}}">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{u}}" aria-expanded="false" aria-controls="{{u}}">
-                                    {{u}}
-                                </button>
-                            </h2>
-                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="{{u}}">
-                                <div class="accordion-body">
-                                    <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+<div class="accordion" id="accordionExample">
+    {% for uni, uniList in programList.items() %}
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading{{uni}}">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{uni}}" aria-expanded="false" aria-controls="collapse{{uni}}">
+                {{uni}}
+            </button>
+        </h2>
+        <div id="collapse{{uni}}" class="accordion-collapse collapse" aria-labelledby="heading{{uni}}" data-bs-parent="#accordionExample">
+            <div class="accordion-body" id="body{{uni}}">
+                <div class="accordion" id="accordionExample{{uni}}">
+                    {% for fac, facList in uniList.items() %}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading{{uni}}{{fac}}">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{uni}}{{fac}}" aria-expanded="false" aria-controls="collapse{{uni}}{{fac}}">
+                                {{fac}}
+                            </button>
+                        </h2>
+                        <div id="collapse{{uni}}{{fac}}" class="accordion-collapse collapse" aria-labelledby="heading{{uni}}{{fac}}" data-bs-parent="#accordionExample{{uni}}">
+                            <div class="accordion-body" id="body{{uni}}{{fac}}">
+                                <div class="accordion" id="accordionExample{{uni}}{{fac}}">
+                                    {% for round, roundList in facList.items() %}
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="heading{{uni}}{{fac}}{{round}}">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{uni}}{{fac}}{{round}}" aria-expanded="false" aria-controls="collapse{{uni}}{{fac}}{{round}}">
+                                                {{round}}
+                                            </button>
+                                        </h2>
+                                        <div id="collapse{{uni}}{{fac}}{{round}}" class="accordion-collapse collapse" aria-labelledby="heading{{uni}}{{fac}}{{round}}" data-bs-parent="#accordionExample{{uni}}{{fac}}">
+                                            <div class="accordion-body" id="body{{uni}}{{fac}}{{round}}">
+                                                <div class="accordion" id="accordionExample{{uni}}{{fac}}">
+                                                    {% for prog, progList in roundList.items() %}
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="heading{{uni}}{{fac}}{{round}}{{prog}}">
+                                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{uni}}{{fac}}{{round}}{{prog}}" aria-expanded="false" aria-controls="collapse{{uni}}{{fac}}{{round}}{{prog}}">
+                                                                {{prog}}
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse{{uni}}{{fac}}{{round}}{{prog}}" class="accordion-collapse collapse" aria-labelledby="heading{{uni}}{{fac}}{{round}}{{prog}}" data-bs-parent="#accordionExample{{uni}}{{fac}}{{round}}">
+                                                            <div class="accordion-body" id="body{{uni}}{{fac}}{{round}}{{prog}}">
+                                                                {{prog}}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    {% endfor %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>
+                    </div>
                     {% endfor %}
                 </div>
             </div>
         </div>
+    </div>
     {% endfor %}
+</div>
 {% endblock %}
