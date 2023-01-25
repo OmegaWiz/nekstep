@@ -7,19 +7,19 @@ def index():
     return render_template('index.html')
 
 @app.route('/engineering')
-def index():
+def engineering():
     return render_template('engineering.html')
 
 @app.route('/science')
-def index():
+def science():
     return render_template('science.html')
 
 @app.route('/medicine')
-def index():
+def medicine():
     return render_template('medicine.html')
 
 @app.route('/others')
-def index():
+def others():
     return render_template('others.html')
 
 if __name__ == '__main__':
