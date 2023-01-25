@@ -3,41 +3,61 @@
 {% block body %} 
 <nav class="navbar nav-pills flex-column flex-sm-row navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand flex-sm-fill text-sm-center nav-link" href="/">Nekstep</a>
+    <a class="navbar-brand flex-sm-fill text-sm-center nav-link" href="/"><strong>Nekstep</strong></a>
     <a class="navbar-brand flex-sm-fill text-sm-center nav-link" aria-current="page" href="/engineering">Engineering</a>
     <a class="navbar-brand flex-sm-fill text-sm-center nav-link" aria-current="page" href="/science">Science</a>
-    <a class="navbar-brand flex-sm-fill text-sm-center nav-link active" aria-current="page" href="#">Medicine</a>
+    <a class="navbar-brand flex-sm-fill text-sm-center nav-link active" aria-current="page" href="/others">Medicine</a>
     <a class="navbar-brand flex-sm-fill text-sm-center nav-link" aria-current="page" href="/others">Others</a>  
   </div>
 </nav>
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">มหาวิทยาลัยมหิดล</h5>
-    <h6 class="card-subtitle mb-2 text-muted">แพทยศาสตร์โรงพยาบาลรามาธิบดี</h6>
-    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#round1" aria-expanded="false" aria-controls="collapseExample">
-      รอบที่ 1 Portfolio
-    </button>
-    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#round2" aria-expanded="false" aria-controls="collapseExample">
-      รอบที่ 2 Quota
-    </button>
-    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#round3" aria-expanded="false" aria-controls="collapseExample">
-      รอบที่ 3 Admission
-    </button>
-    <div class="collapse" id="round1">
-      <div class="card card-body">
-        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-      </div>
-    </div>
-    <div class="collapse" id="round2">
-      <div class="card card-body">
-        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-      </div>
-    </div>
-    <div class="collapse" id="round3">
-      <div class="card card-body">
-        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-      </div>
-    </div>
-  </div>
+
+<hr class="my-2">
+
+<h1>Curriculum & Careers</h1>
+<div class="list-group w-auto">
+    <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+        <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+        <div class="d-flex gap-2 w-100 justify-content-between">
+        <div>
+            <h6 class="mb-0">List group item heading</h6>
+            <p class="mb-0 opacity-75">Some placeholder content in a paragraph.</p>
+        </div>
+        <small class="opacity-50 text-nowrap">now</small>
+        </div>
+    </a>
+    <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+        <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+        <div class="d-flex gap-2 w-100 justify-content-between">
+        <div>
+            <h6 class="mb-0">Another title here</h6>
+            <p class="mb-0 opacity-75">Some placeholder content in a paragraph that goes a little longer so it wraps to a new line.</p>
+        </div>
+        <small class="opacity-50 text-nowrap">3d</small>
+        </div>
+    </a>
+    <a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+        <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+        <div class="d-flex gap-2 w-100 justify-content-between">
+        <div>
+            <h6 class="mb-0">Third heading</h6>
+            <p class="mb-0 opacity-75">Some placeholder content in a paragraph.</p>
+        </div>
+        <small class="opacity-50 text-nowrap">1w</small>
+        </div>
+    </a>
 </div>
+
+<div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-2 mb-3">
+        <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="/engineering" class="nav-link px-2 text-muted">Engineering</a></li>
+        <li class="nav-item"><a href="/science" class="nav-link px-2 text-muted">Science</a></li>
+        <li class="nav-item"><a href="/medicine" class="nav-link px-2 text-muted">Medicine</a></li>
+        <li class="nav-item"><a href="/others" class="nav-link px-2 text-muted">Others</a></li>
+      </ul>
+      <p class="text-center text-muted">Data Provided by 6/3 No. 3, 4, 5, 6, 7</p>
+    </footer>
+</div>
+
 {% endblock %}
