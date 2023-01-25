@@ -9,7 +9,7 @@ def index():
 
 @app.route('/engineering')
 def engineering():
-    data = pd.read_csv("dataStep/engineer.csv")
+    data = pd.read_csv("/home/moonegg/mysite/dataStep/engineer.csv")
 
     #iterate adding data to mega-nested dict
     programList = {}
@@ -31,7 +31,7 @@ def engineering():
 
 @app.route('/science')
 def science():
-    data = pd.read_csv("dataStep/science.csv")
+    data = pd.read_csv("/home/moonegg/mysite/dataStep/science.csv")
 
     #iterate adding data to mega-nested dict
     programList = {}
@@ -51,7 +51,7 @@ def science():
 
 @app.route('/medicine')
 def medicine():
-    data = pd.read_csv("dataStep/medicine.csv")
+    data = pd.read_csv("/home/moonegg/mysite/dataStep/medicine.csv")
 
     #iterate adding data to mega-nested dict
     programList = {}
@@ -71,7 +71,7 @@ def medicine():
 
 @app.route('/others')
 def others():
-    data = pd.read_csv("dataStep/others.csv")
+    data = pd.read_csv("/home/moonegg/mysite/dataStep/others.csv")
 
     #iterate adding data to mega-nested dict
     programList = {}
